@@ -8,7 +8,7 @@
   :root{
     /* イメージカラー #d2e0e1 と、その同系色の濃い色（文字用） */
     --brand:#d2e0e1; --brand-deep:#3b6468; --brand-soft:#eef4f4;
-    --ink:#22343a; --sub:#6a7b80; --line:#dfe8e9; --bg:var(--brand-soft); --card:#fff;
+    --ink:#22343a; --sub:#6a7b80; --line:#dfe8e9; --bg:#f3f6f7; --card:#fff;
     --accent:var(--brand-deep); --ok:var(--brand-deep); --okbg:var(--brand); --few:#b07514; --fewbg:#fbf0dc;
     --full:#a3adb0; --fullbg:#f3f5f5;
   }
@@ -65,8 +65,10 @@
   .note{margin:24px 16px 0;padding:14px 16px;background:var(--card);border-radius:12px;
         border:1px solid var(--line);font-size:12.5px;line-height:1.8;color:var(--sub)}
   .note b{color:var(--ink)}
-  .rule{font-size:12px;color:var(--ink);margin-top:10px;line-height:1.7}
-  .rule b{color:var(--ink)}
+  .scope{margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--brand-soft);font-size:12.5px;line-height:1.7;color:var(--ink)}
+  .scope b{color:#425b70}
+  .rule{margin-top:8px;padding-top:8px;border-top:1px solid var(--line)}
+  .rule b{color:#425b70}
   .demo{background:#fff4d6;color:#7a5a00;font-size:12px;text-align:center;padding:6px}
 </style>
 </head>
@@ -77,18 +79,17 @@
     <div class="brand">LIGARE MEDICAL FITNESS</div>
     <h1>フロアトレーニング 空き状況</h1>
     <div class="updated" id="updated">読み込み中…</div>
-    <div class="legend">
-      <span><b style="color:var(--ok)">○</b>空きあり</span>
-      <span><b style="color:var(--few)">△</b>残りわずか</span>
-      <span><b style="color:var(--full)">×</b>満員</span>
+    <div class="scope">
+      <b>月会費会員様専用</b>のページです。<br>
+      確認できるのは<b>フロアでのトレーニングの空き状況のみ</b>です。コンディショニングの空き状況は表示していません。
+      <div class="rule">時刻は<b>開始時刻</b>です。フロアトレーニングは<b>60分</b>で、開始から60分続けて空いている枠に○△を表示しています。</div>
     </div>
-    <div class="rule">時刻は<b>開始時刻</b>です。フロアトレーニングは<b>60分</b>で、開始から60分続けて空いている枠に○△を表示しています。</div>
   </header>
   <nav class="days" id="days" role="tablist" aria-label="日付"></nav>
   <div class="title" id="title"></div>
   <div id="slots"></div>
   <div class="note">
-    <b>ご予約・キャンセルはスタッフまでご連絡ください。</b><br>
+    <b>ご予約、変更やキャンセルはLINEでご連絡ください。</b><br>
     表示は目安です。タイミングによっては、すでに埋まっている場合があります。
   </div>
 </div>
